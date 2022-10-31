@@ -35,7 +35,7 @@
         public int Id { get; private set; }
         public int Article { get; private set; }
         public object NameCase { get; private set; }
-        public StringContent Content { get; private set; }
+        public object Content { get; private set; }
         public object YearOfOpening { get; private set; }
         public object YearOfClose { get; private set; }
         public int NamberCase { get; private set; }
@@ -46,7 +46,7 @@
                    Id == @case.Id &&
                    Article == @case.Article &&
                    EqualityComparer<object>.Default.Equals(NameCase, @case.NameCase) &&
-                   EqualityComparer<StringContent>.Default.Equals(Content, @case.Content) &&
+                   EqualityComparer<object>.Default.Equals(Content, @case.Content) &&
                    EqualityComparer<object>.Default.Equals(YearOfOpening, @case.YearOfOpening) &&
                    EqualityComparer<object>.Default.Equals(YearOfClose, @case.YearOfClose) &&
                    NamberCase == @case.NamberCase;

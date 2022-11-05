@@ -2,9 +2,9 @@
 {
     using System;
 
-    using Arhiv.Convicted;
-    using Arhiv.Investigator;
-    using Arhiv.CourtCase;
+    //using Arhiv.Convicted;
+    //using Arhiv.Investigator;
+    //using Arhiv.CourtCase;
 
     /// Точка входа в программу
     internal class Program

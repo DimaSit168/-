@@ -22,15 +22,13 @@
         public CourtCase(int id, int article, string NameCase, string Content, int YearOfOpening, int YearOfClose, int NamberCase, string middleName = null)
         {
             this.Id = id;
-            this.Article = article TrimOrNull();
-            this.NameCase = NameCase TrimOrNull();
-            this.Content = Content TrimOrNull();
-            this.YearOfOpening = YearOfOpening TrimOrNull();
-            this.YearOfClose = YearOfClose TrimOrNull();
-            this.NamberCase = NamberCase TrimOrNull();
+            this.Article = article;
+            this.NameCase = NameCase;
+            this.Content = Content;
+            this.YearOfOpening = YearOfOpening;
+            this.YearOfClose = YearOfClose;
+            this.NamberCase = NamberCase;
         }
-
-        private void TrimOrNull() => throw new NotImplementedException();
 
         public int Id { get; private set; }
         public int Article { get; private set; }
@@ -50,6 +48,11 @@
                    EqualityComparer<object>.Default.Equals(YearOfOpening, @case.YearOfOpening) &&
                    EqualityComparer<object>.Default.Equals(YearOfClose, @case.YearOfClose) &&
                    NamberCase == @case.NamberCase;
+        }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
         }
     }
 

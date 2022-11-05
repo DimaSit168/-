@@ -14,12 +14,16 @@
         /// <exception cref="ArgumentOutOfRangeException">В случае если <paramref name="lastName"/> или <paramref name="firstName"/> 
         /// <see langword="null"/>, пустая строка или строка, содержащая только пробельные символы.
         /// </exception>
-        public Investigator(int id, string lastName, string firstName, string middleName = null)
+#pragma warning disable CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.
+        public Investigator(int id, string lastName, string firstName, string? middleName = null)
+#pragma warning restore CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.
         {
             this.Id = id;
+#pragma warning disable CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
             MiddleName = middleName;
-            this.LastName = lastName.TrimOrNull() ?? throw new ArgumentOutOfRangeException(nameof(lastName));
-            this.FirstName = firstName.TrimOrNull() ?? throw new ArgumentOutOfRangeException(nameof(firstName)); ;
+#pragma warning restore CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
+            this.LastName = lastName ?? throw new ArgumentOutOfRangeException(nameof(lastName));
+            this.FirstName = firstName ?? throw new ArgumentOutOfRangeException(nameof(firstName)); ;
         }   
         /// <summary>
         /// Уникальный идентификатор

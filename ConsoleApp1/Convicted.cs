@@ -17,12 +17,12 @@
         /// <exception cref="ArgumentOutOfRangeException">В случае если <paramref name="lastName"/> или <paramref name="firstName"/> 
         /// <see langword="null"/>, пустая строка или строка, содержащая только пробельные символы.
         /// </exception>
-        public Convicted(int id, string lastName, string firstName, string middleName = null)
+        public Convicted(int id, string lastName, string firstName, string? middleName = null)
         {
             this.Id = id;
             this.MiddleName = middleName;
-            this.LastName = lastName.TrimOrNull() ?? throw new ArgumentOutOfRangeException(nameof(lastName));
-            this.FirstName = firstName.TrimOrNull() ?? throw new ArgumentOutOfRangeException(nameof(firstName)); ;
+            this.LastName = lastName ?? throw new ArgumentOutOfRangeException(nameof(lastName));
+            this.FirstName = firstName ?? throw new ArgumentOutOfRangeException(nameof(firstName)); ;
         }
         /// <summary>
         /// Уникальный идентификатор

@@ -25,12 +25,12 @@
             var NameConvicted5 = new Convicted(5, "Воровитов", "Игнат", " ");
             var NameConvicted6 = new Convicted(6, "Горлин", "Витя", " ");
 
-            var CourtCase = new CourtCase(1, "1208", "Горбушечка", "Убийство", "1977", "1978", "105");
-            var CourtCase2 = new CourtCase(2, "1380", "Хлопушка", "Порча имущества", "1978", "1979", "168");
-            var CourtCase3 = new CourtCase(3, "1204", "Хлебозавод", "Кража со взломом", "1979", "1980", "158");
-            var CourtCase4 = new CourtCase(4, "1206", "Горб", "Убийство", "1977", "1978", "105");
-            var CourtCase5 = new CourtCase(5, "1388", "Хлеба и зрелищ", "Организованный разбой", "1978", "1979", "162");
-            var CourtCase6 = new CourtCase(6, "1111", "Хлебоводы", "Угон", "1979", "1980", "166");
+            var CourtCase = new CourtCase(1, 1208, "Горбушечка", "Убийство", 1977, 1978, 105);
+            var CourtCase2 = new CourtCase(2, 1380, "Хлопушка", "Порча имущества", 1978, 1979, 168);
+            var CourtCase3 = new CourtCase(3, 1204, "Хлебозавод", "Кража со взломом", 1979, 1980, 158);
+            var CourtCase4 = new CourtCase(4, 1206, "Горб", "Убийство", 1977, 1978, 105);
+            var CourtCase5 = new CourtCase(5, 1388, "Хлеба и зрелищ", "Организованный разбой", 1978, 1979, 162);
+            var CourtCase6 = new CourtCase(6, 1111, "Хлебоводы", "Угон", 1979, 1980, 166);
 
             Console.WriteLine($"{CourtCase} {NameInvestigator} {NameConvicted}");
         }

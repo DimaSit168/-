@@ -19,7 +19,9 @@
         /// <exception cref="ArgumentOutOfRangeException">В случае если <paramref name="lastName"/> или <paramref name="firstName"/> 
         /// <see langword="null"/>, пустая строка или строка, содержащая только пробельные символы.
         /// </exception>
-        public CourtCase(int id, int article, string NameCase, string Content, int YearOfOpening, int YearOfClose, int NamberCase, string middleName = null)
+#pragma warning disable CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.
+        public CourtCase(int id, int article, string NameCase, string Content, int YearOfOpening, int YearOfClose, int NamberCase, string? middleName = null)
+#pragma warning restore CS8618 // Поле, не допускающее значения NULL, должно содержать значение, отличное от NULL, при выходе из конструктора. Возможно, стоит объявить поле как допускающее значения NULL.
         {
             this.Id = id;
             this.Article = article;
@@ -28,6 +30,8 @@
             this.YearOfOpening = YearOfOpening;
             this.YearOfClose = YearOfClose;
             this.NamberCase = NamberCase;
+            MiddleName = middleName!;
+           
         }
 
         public int Id { get; private set; }
@@ -37,6 +41,8 @@
         public object YearOfOpening { get; private set; }
         public object YearOfClose { get; private set; }
         public int NamberCase { get; private set; }
+        public string MiddleName { get; }
+        public string? MiddleName1 { get; }
 
         public override bool Equals(object? obj)
         {

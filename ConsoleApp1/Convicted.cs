@@ -5,8 +5,6 @@
     /// </summary>
     public class Convicted : IEquatable<Convicted>
     {
-        private readonly object lastName;
-        private readonly object firstName;
 
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Convicted"/>.

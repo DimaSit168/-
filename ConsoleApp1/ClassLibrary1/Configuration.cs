@@ -2,8 +2,8 @@
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
-using NHibernate.Cfg;
 using NHibernate.Linq;
+using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
 
 namespace Arhiv;
@@ -13,16 +13,21 @@ public static class Configuration
 
     private static ISessionFactory GetSessionFactory(
         Settings settings,
-        Assembly assembly = null, //сборка
+        Assembly? assembly = null, //сборка
         bool showSql = false)
     {
         return GetConfiguration();
     }
 
+    private static ISessionFactory GetConfiguration()
+    {
+        throw new NotImplementedException();
+    }
+
     private static FluentConfiguration GetConfiguration(
         Settings settings,
         Assembly assembly,
-        bool showSql = false)
+FluentConfiguration fluentConfiguration, bool showSql = false)
     {
         if (fluentConfiguration is null)
         {

@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{8AB93CB3-FDE9-409E-9B02-743D255477F0}"
 	ProjectSection(SolutionItems) = preProject
 		_stylecop\develop.ruleset = _stylecop\develop.ruleset
+		Mappings.cs = Mappings.cs
 		_stylecop\stylecop.json = _stylecop\stylecop.json
 		_stylecop\tests.ruleset = _stylecop\tests.ruleset
 	EndProjectSection

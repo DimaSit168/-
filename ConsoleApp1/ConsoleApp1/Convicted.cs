@@ -5,7 +5,7 @@ namespace ConsoleApp
     /// <summary>
     /// Осужденный
     /// </summary>
-    public class Convicted : IEquatable<Convicted>
+    public class Convicted : ConvictedBase, IEquatable<Convicted>
     {
 
         /// <summary>
@@ -20,7 +20,7 @@ namespace ConsoleApp
         public Convicted(int id, string lastName, string firstName, string? middleName = null)
         {
             this.Id = id;
-            this.MiddleName = middleName;
+            this.MiddleName = middleName ?? throw new ArgumentOutOfRangeException(nameof(lastName));
             this.LastName = lastName ?? throw new ArgumentOutOfRangeException(nameof(lastName));
             this.FirstName = firstName ?? throw new ArgumentOutOfRangeException(nameof(firstName)); ;
         }
@@ -44,11 +44,18 @@ namespace ConsoleApp
             throw new NotImplementedException();
         }
 
-        public override bool Equals(object obj) => ((IEquatable<Convicted>)this).Equals(obj as Convicted);
-
         public override int GetHashCode()
         {
             throw new NotImplementedException();
         }
+
+        public override bool Equals(object obj)
+        {
+            return ((IEquatable<Convicted>)this).Equals (obj as Convicted);
+        }
+    }
+
+    public class ConvictedBase
+    {
     }
 }

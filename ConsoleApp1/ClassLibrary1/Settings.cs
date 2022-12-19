@@ -1,5 +1,9 @@
 ﻿using System;
 
+///<summary>
+///описние класса
+/// </summary>
+
 namespace ClassLibrary
 {
     public sealed class Settings
@@ -26,6 +30,11 @@ namespace ClassLibrary
         public string GetDatabaseName()
         {
             return this.databaseName;
+        }
+
+        public void AddDatabaseServer(string v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

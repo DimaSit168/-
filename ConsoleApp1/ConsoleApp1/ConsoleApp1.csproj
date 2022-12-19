@@ -8,12 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Convicted.cs~RF14c5b0.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentNHibernate" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
-    <ProjectReference Include="..\TestProject1\TestProject1.csproj" />
   </ItemGroup>
 
 </Project>
